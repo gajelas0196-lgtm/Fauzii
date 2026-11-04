@@ -2,10 +2,10 @@ name: Build Flutter APK
 
 on:
   push:
-    branches: [ "main" ] # Ganti jadi "master" kalau branch utama kamu master
+    branches: [ "main" ] 
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch: # Biar bisa dijalanin manual dari tab Actions
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.19.0' # Sesuaikan dengan versi Flutter kamu
+        flutter-version: '3.47.9'
         channel: 'stable'
         cache: true
 
