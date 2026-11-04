@@ -24,19 +24,15 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.19.0'
+        flutter-version: '3.47.9' # <--- UBAH KE VERSI INI
         channel: 'stable'
-        cache: true
+        cache: false # <--- MATIKAN CACHE
 
     - name: Get Dependencies
       run: flutter pub get
 
     - name: Build APK (Release)
       run: flutter build apk --release
-
-    # Opsional: Kalau mau build App Bundle buat PlayStore, aktifin ini
-    # - name: Build App Bundle (AAB)
-    #   run: flutter build appbundle --release
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
